@@ -6,9 +6,7 @@ app = Flask("Emotion Detector")
 @app.route("/emotionDetector")
 def detect_emotion():
     text_to_analyze = request.args.get('textToAnalyze')
-    if not text_to_analyse:
-        return "Text is missing, please make an entry."
-
+    
     response = emotion_detector(text_to_analyze)
 
     anger = response['anger']
