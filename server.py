@@ -17,11 +17,11 @@ def detect_emotion():
     dominant_emotion = response['dominant_emotion']
 
     if dominant_emotion is None:
-        return "Invalid input!, Try again."
+        return "Invalid text!, Please try again."
     return (
         f"For the given statement, the system response is "
-        f"{{'anger': {anger}, 'disgust': {disgust}, 'fear': {fear}, "
-        f"'joy': {joy}, 'sadness': {sadness}}}. The dominant emotion is {dominant_emotion}."
+        f"'anger': {anger}, 'disgust': {disgust}, 'fear': {fear}, "
+        f"'joy': {joy}, 'sadness': {sadness}. The dominant emotion is {dominant_emotion}."
     )
 
 @app.route("/")
